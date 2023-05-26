@@ -19,4 +19,34 @@ Remove the null values from the data
 Save the Clean data to the file
 
 # CODE
+```
+# Developed by:Jayalakshmi M
+# Register Number:212221040066
+import pandas as pd
+df=pd.read_csv("/content/Data_set.csv")
+print(df)
+df.head(5)
+df.info()
+df.isnull().sum()
+df['show_name']=df['show_name'].fillna(df['aired_on'].mode()[0])
+df['aired_on']=df['aired_on'].fillna(df['aired_on'].mode()[0])
+df['original_network']=df['original_network'].fillna(df['aired_on'].mode()[0]
+)
+df.head()
+df['rating']=df['rating'].fillna(df['rating'].mean())
+df['current_overall_rank']=df['current_overall_rank'].fillna(df['current_over
+all_rank'].mean())
+df.head()
+df['watchers']=df['watchers'].fillna(df['watchers'].median())
+df.head()
+df.info()
+df.isnull().sum()
+```
 # OUPUT
+![EX-01-DATA-CLEANING](ex1(1).png)
+![EX-01-DATA-CLEANING](ex1(2).png)
+![EX-01-DATA-CLEANING](ex1(3).png)
+![EX-01-DATA-CLEANING](ex1(4).png)
+![EX-01-DATA-CLEANING](ex1(5).png)
+# RESULT
+Hence the given data is read and perform data cleaning and save the cleaned data to a file.
